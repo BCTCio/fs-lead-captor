@@ -25,7 +25,7 @@ const LeadCaptureForm = ({ channel }: Props) => {
               <div className='mt-1 sm:mt-0 sm:col-span-2'>
                 <SingleDropdown
                   label='Channel'
-                  value={}
+                  value={'123123123123'}
                   onChange={() => {}}
                   data={new Array(15).fill(0).map((_, i) => ({
                     id: (i + 7).toString(),
