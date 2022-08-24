@@ -8,7 +8,7 @@ export interface SingleDropdownProps {
   showStatus?: boolean;
   label?: string;
   data: DropdownData[];
-  onChange: (v: DropdownData['id']) => void;
+  onChange: (v: any) => void;
   value: DropdownData['id'];
   description?: string;
   required?: boolean;

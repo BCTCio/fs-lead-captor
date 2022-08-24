@@ -4,9 +4,10 @@ import { SingleDropdown } from './SingleDropdown';
 
 type Props = {
   channel: Channel;
+  setChannel: React.Dispatch<React.SetStateAction<Channel>>;
 };
 
-const LeadCaptureForm = ({ channel }: Props) => {
+const LeadCaptureForm = ({ channel, setChannel }: Props) => {
   return (
     <form className='space-y-8 divide-y divide-gray-200'>
       <div className='space-y-8 divide-y divide-gray-200 sm:space-y-5'>
@@ -25,11 +26,11 @@ const LeadCaptureForm = ({ channel }: Props) => {
               <div className='mt-1 sm:mt-0 sm:col-span-2'>
                 <SingleDropdown
                   label='Channel'
-                  value={'123123123123'}
-                  onChange={() => {}}
-                  data={new Array(15).fill(0).map((_, i) => ({
-                    id: (i + 7).toString(),
-                    title: (i + 7).toString(),
+                  value={channel}
+                  onChange={(e: Channel) => setChannel(e)}
+                  data={Object.keys(Channel).map((_, i) => ({
+                    id: _,
+                    title: _,
                   }))}
                 />
               </div>
